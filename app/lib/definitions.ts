@@ -1,6 +1,9 @@
 // This file contains type definitions for your data.
 // It describes the shape of the data, and what data type each property should accept.
 // For simplicity of teaching, we're manually defining these types.
+
+import { ReactNode } from "react";
+
 // However, these types are generated automatically if you're using an ORM such as Prisma.
 export type User = {
   id: string;
@@ -86,3 +89,17 @@ export type InvoiceForm = {
   amount: number;
   status: 'pending' | 'paid';
 };
+
+export interface Product {
+  id: string;
+  name: string;
+  image_url?: string;
+  category: string;
+  price: number;
+  stock: number;
+  status: 'in_stock' | 'out_of_stock';
+  created_at?: string; // Optional timestamp
+  updated_at?: string; // Optional timestamp
+  description?: string; // Optional description
+  sku?: string; // Optional SKU code
+}

@@ -129,6 +129,72 @@ const invoices = [
   },
 ];
 
+const products = [
+  {
+    id: '1',
+    name: 'Rustic Bloom Box',
+    price: 800000,
+    stock: 15,
+    image_url: '/products/rustic-bloom-box.png',
+  },
+  {
+    id: '2',
+    name: 'Lavender Serenity',
+    price: 650000,
+    stock: 10,
+    image_url: '/products/lavender-serenity.png',
+  },
+  {
+    id: '3',
+    name: 'Blushing Elegance',
+    price: 850000,
+    stock: 8,
+    image_url: '/products/blushing-elegance.png',
+  },
+  {
+    id: '4',
+    name: 'Pastel Garden',
+    price: 850000,
+    stock: 12,
+    image_url: '/products/pastel-garden.png',
+  },
+  {
+    id: '5',
+    name: 'Sunset Charm',
+    price: 550000,
+    stock: 20,
+    image_url: '/products/sunset-charm.png',
+  },
+  {
+    id: '6',
+    name: 'Royal Harmony',
+    price: 950000,
+    stock: 5,
+    image_url: '/products/royal-harmony.png',
+  },
+  {
+    id: '7',
+    name: 'Spring Whisper',
+    price: 880000,
+    stock: 9,
+    image_url: '/products/spring-whisper.png',
+  },
+  {
+    id: '8',
+    name: 'Violet Dreams',
+    price: 750000,
+    stock: 14,
+    image_url: '/products/violet-dreams.png',
+  },
+  {
+    id: '9',
+    name: 'Rosy Embrace',
+    price: 690000,
+    stock: 18,
+    image_url: '/products/rosy-embrace.png',
+  },
+];
+
 const revenue = [
   { month: 'Jan', revenue: 2000 },
   { month: 'Feb', revenue: 1800 },
@@ -144,4 +210,4 @@ const revenue = [
   { month: 'Dec', revenue: 4800 },
 ];
 
-export { users, customers, invoices, revenue };
+export { users, customers, invoices, revenue,products };

@@ -216,3 +216,238 @@ export function InvoicesTableSkeleton() {
     </div>
   );
 }
+
+export function ProductCardSkeleton() {
+  return (
+    <div
+      className={`${shimmer} relative overflow-hidden rounded-xl bg-gray-100 p-4 shadow-sm`}
+    >
+      {/* Product Image Placeholder */}
+      <div className="mb-4 h-48 w-full rounded-lg bg-gray-200" />
+      
+      {/* Product Name */}
+      <div className="mb-2 h-6 w-3/4 rounded-md bg-gray-200" />
+      
+      {/* Product Price */}
+      <div className="mb-3 h-5 w-20 rounded-md bg-gray-200" />
+      
+      {/* Product Rating */}
+      <div className="mb-4 flex items-center">
+        <div className="flex space-x-1">
+          {[...Array(5)].map((_, i) => (
+            <div key={i} className="h-4 w-4 rounded-full bg-gray-200" />
+          ))}
+        </div>
+        <div className="ml-2 h-4 w-8 rounded-md bg-gray-200" />
+      </div>
+      
+      {/* Add to Cart Button */}
+      <div className="h-10 w-full rounded-md bg-gray-200" />
+    </div>
+  );
+}
+
+export function ProductCardsSkeleton() {
+  return (
+    <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      <ProductCardSkeleton />
+      <ProductCardSkeleton />
+      <ProductCardSkeleton />
+      <ProductCardSkeleton />
+      <ProductCardSkeleton />
+      <ProductCardSkeleton />
+      <ProductCardSkeleton />
+      <ProductCardSkeleton />
+    </div>
+  );
+}
+
+export function ProductDetailSkeleton() {
+  return (
+    <div className={`${shimmer} relative overflow-hidden rounded-xl bg-gray-100 p-6`}>
+      <div className="flex flex-col gap-8 lg:flex-row">
+        {/* Product Images */}
+        <div className="w-full lg:w-1/2">
+          {/* Main Image */}
+          <div className="mb-4 h-80 w-full rounded-lg bg-gray-200" />
+          
+          {/* Thumbnail Images */}
+          <div className="flex space-x-4">
+            {[...Array(4)].map((_, i) => (
+              <div key={i} className="h-20 w-20 rounded-md bg-gray-200" />
+            ))}
+          </div>
+        </div>
+        
+        {/* Product Info */}
+        <div className="w-full lg:w-1/2">
+          {/* Product Name */}
+          <div className="mb-4 h-8 w-3/4 rounded-md bg-gray-200" />
+          
+          {/* Product Rating */}
+          <div className="mb-4 flex items-center">
+            <div className="flex space-x-1">
+              {[...Array(5)].map((_, i) => (
+                <div key={i} className="h-5 w-5 rounded-full bg-gray-200" />
+              ))}
+            </div>
+            <div className="ml-2 h-5 w-16 rounded-md bg-gray-200" />
+          </div>
+          
+          {/* Product Price */}
+          <div className="mb-6 h-8 w-32 rounded-md bg-gray-200" />
+          
+          {/* Product Description */}
+          <div className="mb-6 space-y-2">
+            <div className="h-4 w-full rounded-md bg-gray-200" />
+            <div className="h-4 w-full rounded-md bg-gray-200" />
+            <div className="h-4 w-3/4 rounded-md bg-gray-200" />
+          </div>
+          
+          {/* Color Options */}
+          <div className="mb-4 h-6 w-24 rounded-md bg-gray-200" />
+          <div className="mb-6 flex space-x-3">
+            {[...Array(4)].map((_, i) => (
+              <div key={i} className="h-8 w-8 rounded-full bg-gray-200" />
+            ))}
+          </div>
+          
+          {/* Size Options */}
+          <div className="mb-4 h-6 w-16 rounded-md bg-gray-200" />
+          <div className="mb-6 flex space-x-3">
+            {[...Array(5)].map((_, i) => (
+              <div key={i} className="h-10 w-10 rounded-md bg-gray-200" />
+            ))}
+          </div>
+          
+          {/* Add to Cart and Buy Now Buttons */}
+          <div className="flex space-x-4">
+            <div className="h-12 w-1/2 rounded-md bg-gray-200" />
+            <div className="h-12 w-1/2 rounded-md bg-gray-200" />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export function ProductsTableRowSkeleton() {
+  return (
+    <tr className="w-full border-b border-gray-100 last-of-type:border-none [&:first-child>td:first-child]:rounded-tl-lg [&:first-child>td:last-child]:rounded-tr-lg [&:last-child>td:first-child]:rounded-bl-lg [&:last-child>td:last-child]:rounded-br-lg">
+      {/* Product Image and Name */}
+      <td className="relative overflow-hidden whitespace-nowrap py-3 pl-6 pr-3">
+        <div className="flex items-center gap-3">
+          <div className="h-12 w-12 rounded-md bg-gray-100"></div>
+          <div className="h-6 w-32 rounded bg-gray-100"></div>
+        </div>
+      </td>
+      {/* Category */}
+      <td className="whitespace-nowrap px-3 py-3">
+        <div className="h-6 w-24 rounded bg-gray-100"></div>
+      </td>
+      {/* Price */}
+      <td className="whitespace-nowrap px-3 py-3">
+        <div className="h-6 w-16 rounded bg-gray-100"></div>
+      </td>
+      {/* Stock */}
+      <td className="whitespace-nowrap px-3 py-3">
+        <div className="h-6 w-16 rounded bg-gray-100"></div>
+      </td>
+      {/* Status */}
+      <td className="whitespace-nowrap px-3 py-3">
+        <div className="h-6 w-20 rounded bg-gray-100"></div>
+      </td>
+      {/* Actions */}
+      <td className="whitespace-nowrap py-3 pl-6 pr-3">
+        <div className="flex justify-end gap-3">
+          <div className="h-[38px] w-[38px] rounded bg-gray-100"></div>
+          <div className="h-[38px] w-[38px] rounded bg-gray-100"></div>
+          <div className="h-[38px] w-[38px] rounded bg-gray-100"></div>
+        </div>
+      </td>
+    </tr>
+  );
+}
+
+export function ProductsMobileSkeleton() {
+  return (
+    <div className="mb-2 w-full rounded-md bg-white p-4">
+      <div className="flex items-center justify-between border-b border-gray-100 pb-4">
+        <div className="flex items-center">
+          <div className="mr-3 h-12 w-12 rounded-md bg-gray-100"></div>
+          <div>
+            <div className="h-6 w-28 rounded bg-gray-100"></div>
+            <div className="mt-2 h-4 w-20 rounded bg-gray-100"></div>
+          </div>
+        </div>
+        <div className="h-6 w-16 rounded bg-gray-100"></div>
+      </div>
+      <div className="flex w-full items-center justify-between pt-4">
+        <div>
+          <div className="h-5 w-16 rounded bg-gray-100"></div>
+          <div className="mt-2 h-5 w-20 rounded bg-gray-100"></div>
+        </div>
+        <div className="flex justify-end gap-2">
+          <div className="h-10 w-10 rounded bg-gray-100"></div>
+          <div className="h-10 w-10 rounded bg-gray-100"></div>
+          <div className="h-10 w-10 rounded bg-gray-100"></div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export function ProductsTableSkeleton() {
+  return (
+    <div className="mt-6 flow-root">
+      <div className="inline-block min-w-full align-middle">
+        <div className="rounded-lg bg-gray-50 p-2 md:pt-0">
+          <div className="md:hidden">
+            <ProductsMobileSkeleton />
+            <ProductsMobileSkeleton />
+            <ProductsMobileSkeleton />
+            <ProductsMobileSkeleton />
+            <ProductsMobileSkeleton />
+            <ProductsMobileSkeleton />
+          </div>
+          <table className="hidden min-w-full text-gray-900 md:table">
+            <thead className="rounded-lg text-left text-sm font-normal">
+              <tr>
+                <th scope="col" className="px-4 py-5 font-medium sm:pl-6">
+                  Product
+                </th>
+                <th scope="col" className="px-3 py-5 font-medium">
+                  Category
+                </th>
+                <th scope="col" className="px-3 py-5 font-medium">
+                  Price
+                </th>
+                <th scope="col" className="px-3 py-5 font-medium">
+                  Stock
+                </th>
+                <th scope="col" className="px-3 py-5 font-medium">
+                  Status
+                </th>
+                <th
+                  scope="col"
+                  className="relative pb-4 pl-3 pr-6 pt-2 sm:pr-6"
+                >
+                  <span className="sr-only">Actions</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody className="bg-white">
+              <ProductsTableRowSkeleton />
+              <ProductsTableRowSkeleton />
+              <ProductsTableRowSkeleton />
+              <ProductsTableRowSkeleton />
+              <ProductsTableRowSkeleton />
+              <ProductsTableRowSkeleton />
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  );
+}
+
